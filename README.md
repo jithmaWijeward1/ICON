@@ -338,14 +338,12 @@ Combines predictions from global overlap, subset overlap, and subset non-overlap
 - `verbose` - Print progress messages and results (default: TRUE)
 
 **Returns:**
-- `final_predictions_df` - Combined data frame with all predictions
+- `final_predictions_df` - Combined data frame with all predictions 
 - `confusion_matrix` - Confusion matrix table
 - `accuracy` - Overall accuracy (from confusion matrix)
 - `accuracy_manual` - Manual accuracy calculation (matching cells / total cells)
 - `accurate_cells_count` - Number of correctly predicted cells
 - `total_cells` - Total number of cells
-  
--  `save` the dataframe with predicted cell types as a CSV
 
 **Example:**
 ```r
@@ -355,6 +353,7 @@ final_eval <- combined_final_predictions(global_overlap,
 cat("Final Combined Accuracy:", final_eval$accuracy, "\n")
 print(final_eval$confusion_matrix)
 
+# Save the dataframe with predicted cell types as a CSV
 write.csv(
   final_eval$final_predictions_df,
   file = "Predicted cell types.csv",
