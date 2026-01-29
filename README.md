@@ -363,7 +363,7 @@ write.csv(
 
 ## Quick Start
 
-Usage note: If you have the isoform- and gene-level Seurat objects and the required cell type annotation information (for use with assign_cell_types(), including annotation_file, barcode_col, and cell_type_col), you can use the Example.R script to quickly run the complete analysis workflow using the functions provided in this repository.
+If you have the isoform- and gene-level Seurat objects and the respective cell type annotation information (for use with assign_cell_types(), including annotation_file, barcode_col, and cell_type_col), you can use the Example.R script to quickly run the complete analysis workflow using the functions provided in this repository.
 
 ## Notes
 
