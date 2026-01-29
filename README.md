@@ -344,7 +344,7 @@ Combines predictions from global overlap, subset overlap, and subset non-overlap
 - `accuracy_manual` - Manual accuracy calculation (matching cells / total cells)
 - `accurate_cells_count` - Number of correctly predicted cells
 - `total_cells` - Total number of cells
-- `save the dataframe with predicted cell types as a CSV
+-  `save the dataframe with predicted cell types as a CSV
 
 **Example:**
 ```r
