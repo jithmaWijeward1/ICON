@@ -5,7 +5,7 @@
 library(Seurat)
 library(randomForest)
 
-source("scRNA_analysis_functions.R")
+source("Functions.R")
 
 # 1. Data Loading and Preprocessing
 
@@ -263,5 +263,6 @@ print(subset_non_overlap)
 print(Global_isform_RF_accuracy)
 print(Global_gene_RF_accuracy)
 print(Final_Combined_model_accuracy)
+
 
 
