@@ -251,18 +251,10 @@ write.csv(
   row.names = FALSE
 )
 
-dim(isoform_train_data)
-dim(isoform_test_data)
-dim(global_overlap)
-dim(global_non_overlap_isoforms)
-dim(subset_overlap)
-dim(subset_non_overlap_isoforms)
-subset_non_overlap<- (dim(isoform_test_data)[2])-(dim(global_overlap)[2])-(dim(subset_overlap)[2])
-print(subset_non_overlap)
-
 print(Global_isform_RF_accuracy)
 print(Global_gene_RF_accuracy)
 print(Final_Combined_model_accuracy)
+
 
 
 
