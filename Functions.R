@@ -1,5 +1,5 @@
-# Single-Cell RNA-seq Analysis Functions
-# This script contains functions for importing, preprocessing, and analyzing single-cell data
+# Single-cell long-read RNA-seq cell type annotation functions
+# Functions for importing, preprocessing, and analyzing single-cell long-read RNA-seq data
 
 library(Seurat)
 library(dplyr)
@@ -1333,6 +1333,7 @@ combined_final_predictions <- function(global_overlap,
     total_cells = total_cells
   ))
 }
+
 
 
 
