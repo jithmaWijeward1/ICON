@@ -5,18 +5,15 @@
 library(Seurat)
 library(randomForest)
 
-setwd("C:/Users/JD114351/OneDrive - James Cook University/Desktop/Sachini/Mathematical modeling/Hierarchical RF/Feature engineering/Script for github")
 source("scRNA_analysis_functions.R")
 
 # 1. Data Loading and Preprocessing
-
-setwd("C:/Users/JD114351/OneDrive - James Cook University/Desktop/Sachini/Mathematical modeling/Hierarchical RF/Feature engineering/Script for github/Count matrices")
 
 #Isoform count matrix
 
 # Import Seurat object
 # First, load your Seurat object (e.g., from an RDS file)
-Isoform_seurat_obj <- readRDS("Isoform_count_matrix_Early_blood.rds")
+Isoform_seurat_obj <- readRDS("Isoform_count_matrix.rds")
 # OR create a Seurat object from your data using Seurat's native functions
 # Then pass it to import_count_matrix:
 Isoform_seurat_obj <- import_count_matrix(Isoform_seurat_obj)
@@ -26,7 +23,7 @@ Isoform_seurat_obj <- preprocess_data(Isoform_seurat_obj, nfeatures = 2000)
 
 # Assign cell types from TSV file
 Isoform_seurat_obj <- assign_cell_types(Isoform_seurat_obj,
-                                        annotation_file = "C:/Users/JD114351/OneDrive - James Cook University/Desktop/Sachini/Test/Data with ground thruth labels/sample2stage.txt",
+                                        annotation_file = "Annotation.txt",
                                         barcode_col = "sample",
                                         cell_type_col = "stage")
 
@@ -43,11 +40,11 @@ Isoform_seurat_obj <- scale_and_reduce_dimensions(Isoform_seurat_obj)
 # Visualize elbow plot to determine dimensionality:
 ElbowPlot(Isoform_seurat_obj)
 
-#Gene count matrix--------------------------------------------------------------
+#Gene count matrix
 
 # Import Seurat object
 # First, load your Seurat object (e.g., from an RDS file)
-Gene_seurat_obj <- readRDS("Gene_count_matrix_Early_blood.rds")
+Gene_seurat_obj <- readRDS("Gene_count_matrix.rds")
 # OR create a Seurat object from your data using Seurat's native functions
 # Then pass it to import_count_matrix:
 Gene_seurat_obj <- import_count_matrix(Gene_seurat_obj)
@@ -57,7 +54,7 @@ Gene_seurat_obj <- preprocess_data(Gene_seurat_obj, nfeatures = 2000)
 
 # Assign cell types from TSV file
 Gene_seurat_obj <- assign_cell_types(Gene_seurat_obj,
-                                     annotation_file = "C:/Users/JD114351/OneDrive - James Cook University/Desktop/Sachini/Test/Data with ground thruth labels/sample2stage.txt",
+                                     annotation_file = "Annotation.txt",
                                      barcode_col = "sample",
                                      cell_type_col = "stage")
 
@@ -73,8 +70,6 @@ cat("Unique genes across all cell types:", RGU_result$n_unique_features, "\n")
 Gene_seurat_obj <- scale_and_reduce_dimensions(Gene_seurat_obj)
 # Visualize elbow plot to determine dimensionality:
 ElbowPlot(Gene_seurat_obj)
-
-#-----------------------------------------------------------------------
 
 # 2. Split cells into training and testing sets 
 
@@ -252,7 +247,7 @@ Final_Combined_model_accuracy <- final_eval$accuracy_manual
 # Save the dataframe with predicted cell types as a CSV
 write.csv(
   final_eval$final_predictions_df,
-  file = "C:/Users/JD114351/OneDrive - James Cook University/Desktop/Sachini/Mathematical modeling/Hierarchical RF/Feature engineering/Script for github/Predicted cell types/Early blood dataset predicted cell types.csv",
+  file = "Predicted cell types.csv",
   row.names = FALSE
 )
 
@@ -268,4 +263,5 @@ print(subset_non_overlap)
 print(Global_isform_RF_accuracy)
 print(Global_gene_RF_accuracy)
 print(Final_Combined_model_accuracy)
+
 
