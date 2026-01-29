@@ -1,4 +1,4 @@
-# IsoHRF
+# scLongReadCellType
 
 This repository contains an R-based workflow and example datasets for cell type annotation in single-cell long read RNA-seq data using a hierarchical Random Forest framework that integrates isoform- and gene-based predictions.
 
