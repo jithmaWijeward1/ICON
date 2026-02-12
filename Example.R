@@ -245,6 +245,7 @@ final_eval <- combined_final_predictions(global_overlap,
                                          subset_non_overlap_pred_col = "Subset_isoform_predicted_cell_type")
 cat("Final Combined Accuracy:", final_eval$accuracy, "\n")
 cat("Final Combined Accuracy manually calculated:", final_eval$accuracy_manual, "\n")
+Final_Combined_model_accuracy <- final_eval$accuracy_manual
 
 # Save the dataframe with predicted cell types as a CSV
 write.csv(
@@ -256,6 +257,7 @@ write.csv(
 cat("Global isoform RF accuracy:", Global_isform_RF_accuracy, "\n")
 cat("Global gene RF accuracy:", Global_gene_RF_accuracy, "\n")
 cat("Final combined model accuracy:", Final_Combined_model_accuracy, "\n")
+
 
 
 
