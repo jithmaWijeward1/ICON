@@ -1,0 +1,26 @@
+Package: ICON
+Title: Isoform-Cell-type Classification via Overlapping Networks
+Version: 0.1.0
+Authors@R: 
+    person("Sachini", "Wijewardena", email = "jithma.wijewardena@gmail.com",
+           role = c("aut", "cre"))
+Description: Hierarchical Random Forest pipeline for cell type classification
+    from single-cell RNA-seq data. ICON uses both isoform and gene count matrices
+    and combines predictions from two levels of Random Forest models to improve
+    cell type classification accuracy.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports:
+    Seurat,
+    SeuratObject,
+    dplyr,
+    ggplot2,
+    Matrix,
+    openxlsx,
+    randomForest,
+    tools
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0
