@@ -58,7 +58,7 @@ result <- ICON(
   annotation_file = "Annotation_file.txt",
   barcode_col   = "cell_id",
   cell_type_col = "cell_type",
-  assign_test_cell_types = TRUE,
+  assign_test_cell_types = FALSE,
   nfeatures       = 2000,
   top_n           = 100,
   nfeatures_model = 500,
