@@ -146,9 +146,9 @@ The following files are generated in the working directory:
   - Accuracy metrics are reported as `NA` because true test labels are
     unavailable.
 - **Benchmarking ICON performance:**
+  - Set `assign_test_cell_types = TRUE`.
   - Provide cell type annotations for both training and testing
     datasets.
-  - Set `assign_test_cell_types = TRUE`.
   - ICON evaluates predictions against the provided test labels.
   - Accuracy metrics and confusion matrix are returned.
 
