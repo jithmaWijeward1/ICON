@@ -208,11 +208,11 @@ The following files are generated in the working directory:
 
 ## Example Datasets
 
-### Early blood development dataset
+### Early Blood development dataset
 
 - The Data folder includes example isoform- and gene-level Seurat
   objects, together with the corresponding cell type annotation file,
-  derived from the early blood development dataset published by Wang et
+  derived from the Early Blood development dataset published by Wang et
   al. (2022).
 - These files can be used to familiarise yourself with the ICON workflow
   or to reproduce the example analysis.
