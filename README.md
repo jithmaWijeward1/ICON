@@ -1,5 +1,5 @@
 
-# ICON: Isoform-Cell-type Classification via Overlapping Networks
+# ICON: An isoform-aware hierarchical random forest model for cell type classification
 
 ICON is an R package for cell type classification from single-cell
 RNA-seq data. It uses a **hierarchical Random Forest approach** that
