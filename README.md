@@ -53,7 +53,7 @@ result <- ICON(
   annotation_file = "Annotation_file.txt",
   barcode_col   = "cell_id",
   cell_type_col = "cell_type",
-  assign_test_cell_types = TRUE,
+  assign_test_cell_types = FALSE,
   nfeatures       = 2000,
   top_n           = 100,
   nfeatures_model = 500,
@@ -219,13 +219,14 @@ The following files are generated in the working directory:
 
 ``` r
 result <- ICON(
-  isoform_train   = readRDS("isoform_train_data_Early_blood.rds"),
-  isoform_test    = readRDS("isoform_test_data_Early_blood.rds"),
-  gene_train      = readRDS("gene_train_data_Early_blood.rds"),
-  gene_test       = readRDS("gene_test_data_Early_blood.rds"),
-  annotation_file = "Early_blood_cell_type_annotation.txt",
+  isoform_train   = readRDS("isoform_train_Early_blood_dataset.rds"),
+  isoform_test    = readRDS("isoform_test_Early_blood_dataset.rds"),
+  gene_train      = readRDS("gene_train_Early_blood_dataset.rds"),
+  gene_test       = readRDS("gene_test_Early_blood_dataset.rds"),
+  annotation_file = "sample2stage.txt",
   barcode_col     = "sample",
-  cell_type_col   = "stage"
+  cell_type_col   = "stage",
+  assign_test_cell_types = TRUE
 )
 ```
 
